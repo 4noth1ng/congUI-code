@@ -1,0 +1,97 @@
+.swiper {
+    width: 700px;
+    height: 300px;
+    position: relative;
+    &-body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    &-item {
+
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        list-style: none;
+        transition: opacity 0.3s linear;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &.activeImg {
+            opacity: 1;
+        }
+    }
+
+    &-btn {
+        width: 44px;
+        height: 44px;
+        background: rgba(0,0,0,.2);
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 2;
+        line-height: 44px;
+        font-family: serif;
+        text-decoration: none;
+        opacity: 0.5;
+        transition: all .2s linear;
+        &.prev {
+            position: absolute;
+            top: 50%;
+            left: 1%;
+            transform: translateY(-50%);
+        }
+        &.next {
+            position: absolute;
+            top: 50%;
+            left: 99%;
+            transform: translate(-100%,-50%);
+        }
+        &:hover {
+            opacity: 1;
+            color:#eaeaea;
+            text-decoration: none;
+        }
+    }
+
+    &-footer {
+        width: 18%;
+        height: 15px;
+        position: absolute;
+        top: 98%;
+        left: 50%;
+        transform: translate(-50%,-100%);
+        &-body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+        &-item {
+            width: 15px;
+            height: 100%;
+            border-radius: 50%;
+            background-color: black;
+            list-style: none;
+            opacity: 0.1;
+            transition: all .3s linear;
+            &:hover {
+                cursor: pointer;
+                opacity: 0.3;
+            }
+            &.activeFooter {
+                opacity: 0.6;
+            }
+        }
+    }
+}

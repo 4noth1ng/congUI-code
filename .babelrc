@@ -1,0 +1,12 @@
+{
+    "presets": [["@babel/preset-env", { "modules": false }]],
+    "plugins": [
+      [
+        "component",
+        {
+          "libraryName": "cong-ui",
+          "styleLibraryName": "~node_modules/cong-ui/style"
+        }
+      ]
+    ]
+  }
